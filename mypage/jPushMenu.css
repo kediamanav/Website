@@ -1,0 +1,241 @@
+/* General styles for all menus */
+.cbp-spmenu {
+	background: #232323;
+	position: fixed;
+	padding: 0;
+	background-size: cover;
+	background-image: url('../images/blur3.png');
+	/* background-image: url('../images/bkgs/blur.png'); */
+}
+
+.cbp-spmenu h3 {
+	color: rgba(255,255,255,.8);
+	font-size: 1.3em;
+	padding: 20px 0;
+	letter-spacing: 5px;
+	text-transform: uppercase;
+	margin: 0;
+	text-align: center;
+	width: 150px;
+/* 	border-bottom: 0px solid rgba(0,0,0,.2); */
+	background: rgba(0,0,0,.2);
+}
+
+/*
+.cbp-spmenu a {
+	display: block;
+	color: #fff;
+	font-size: .7em;
+	font-weight: 900;
+	transition: opacity 1s;
+	opacity: .4;
+	height: 50px;
+	width: 67px;
+	line-height: 1090%;
+	margin: 0 0 70px 40px;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background-position-x: center;
+	background-repeat: no-repeat;
+	background-size: 60px 309px;
+	text-align: center;
+}
+*/
+
+.cbp-spmenu a {
+	display: block;
+	color: #fff;
+	font-size: .7em;
+	font-weight: 900;
+	transition: opacity 1s;
+	opacity: .4;
+	width: 100%;
+	line-height: 400%;
+	height: 10px;
+	padding: 50px 0 50px 0;
+	letter-spacing: 2px;
+	text-transform: uppercase;
+	background-repeat: no-repeat;
+	text-align: center;
+}
+
+	.home {
+		background: url('../images/home.png');
+		text-indent: 4px;
+		background-size: 27px 27px;
+		background-position: center 30px;
+	}
+	
+	.about {
+		background: url('../images/about.png');
+		text-indent: 4px;
+		background-size: 27px 27px;
+		background-position: center 30px;
+	}
+	
+	.skills {
+		background: url('../images/skills.png');
+		background-position: center 26px;
+		background-size: 31px 31px;
+		text-indent: 5px;
+	}
+	
+	.work {
+		background: url('../images/work.png');
+		background-position: center 26px;
+		/* background-size: 35px 29px; */
+		background-size: 28px 29px;
+		text-indent: 3px;
+	}
+	
+	.contact {
+		background: url('../images/contact.png');
+		background-position: center 29px;
+		background-size: 35px 26px;
+		text-indent: 5px;
+	}
+
+
+.cbp-spmenu a:hover {
+	opacity: .95;
+	transition: opacity .5s;
+	background-color: rgba(255,255,255,.04);
+}
+
+
+/* Orientation-dependent styles for the content of the menu */
+
+.cbp-spmenu-vertical {
+	width: 150px;
+	height: 100%;
+	top: 0;
+	z-index: 1000;
+}
+
+.cbp-spmenu-vertical a {
+/* 	border-bottom: 1px solid #34495e; */
+	/* padding: 1em 1em .4em 2.75em; */
+}
+	
+
+.cbp-spmenu-horizontal {
+	width: 100%;
+	height: 150px;
+	left: 0;
+	z-index: 1000;
+	overflow: hidden;
+}
+
+.cbp-spmenu-horizontal h3 {
+	height: 100%;
+	width: 20%;
+	float: left;
+}
+
+.cbp-spmenu-horizontal a {
+	float: left;
+	width: 20%;
+	padding: 0.8em;
+	border-left: 1px solid #258ecd;
+}
+
+/* Vertical menu that slides from the left or right */
+
+.cbp-spmenu-left {
+	left: -150px;
+}
+
+.cbp-spmenu-right {
+	right: -150px;
+}
+
+.cbp-spmenu-left.cbp-spmenu-open {
+	left: 0px;
+}
+
+.cbp-spmenu-right.cbp-spmenu-open {
+	right: 0px;
+}
+
+/* Horizontal menu that slides from the top or bottom */
+
+.cbp-spmenu-top {
+	top: -150px;
+}
+
+.cbp-spmenu-bottom {
+	bottom: -150px;
+}
+
+.cbp-spmenu-top.cbp-spmenu-open {
+	top: 0px;
+}
+
+.cbp-spmenu-bottom.cbp-spmenu-open {
+	bottom: 0px;
+}
+
+/* Push classes applied to the body */
+
+.cbp-spmenu-push {
+	overflow-x: hidden;
+	position: relative;
+	left: 0;
+}
+
+.cbp-spmenu-push-toright {
+	left: 240px;
+}
+
+.cbp-spmenu-push-toleft {
+	left: -150px;
+}
+
+/* Transitions */
+
+.cbp-spmenu,
+.cbp-spmenu-push {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+/* Example media queries */
+
+@media screen and (max-width: 55.1875em){
+
+	.cbp-spmenu-horizontal {
+		font-size: 75%;
+		height: 110px;
+	}
+
+	.cbp-spmenu-top {
+		top: -110px;
+	}
+
+	.cbp-spmenu-bottom {
+		bottom: -110px;
+	}
+
+}
+
+@media screen and (max-height: 26.375em){
+
+	.cbp-spmenu-vertical {
+		font-size: 90%;
+		width: 190px;
+	}
+
+	.cbp-spmenu-left,
+	.cbp-spmenu-push-toleft {
+		left: -190px;
+	}
+
+	.cbp-spmenu-right {
+		right: -190px;
+	}
+
+	.cbp-spmenu-push-toright {
+		left: 190px;
+	}
+}
